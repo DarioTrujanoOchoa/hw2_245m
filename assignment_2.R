@@ -21,8 +21,18 @@ neighborhoods <- neighborhood %>% filter(!is.na(neighborhood)) %>% arrange(desc(
 ### (c)
 airbnb_top_neighborhoods <- airbnb %>% filter(neighborhood %in% neighborhoods$neighborhood)
 
+### (d)
+summary_stats_top_neighborhoods <- airbnb_top_neighborhoods %>% group_by(neighborhood) %>% summarise(
+                                                                  avg_square_feet = mean(square_feet, na.rm = TRUE), 
+                                                                  avg_price = mean(price, na.rm = TRUE), 
+                                                                  sd_price = sd(price, na.rm = TRUE), 
+                                                                  max_price = max(price, na.rm = TRUE), 
+                                                                  min_price = min(price, na.rm = TRUE))
 
+### (e)
+highest_avg_square_fit <- max(summary_stats_top_neighborhoods$avg_square_feet, na.rm = TRUE)
 
+second_avg_price <- sort(summary_stats_top_neighborhoods$avg_price, decreasing = TRUE)[2]
 
 
 
