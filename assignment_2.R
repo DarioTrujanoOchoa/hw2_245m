@@ -30,7 +30,7 @@ summary_stats_top_neighborhoods <- airbnb_top_neighborhoods %>% group_by(neighbo
                                                                   min_price = min(price, na.rm = TRUE))
 
 ### (e)
-highest_avg_square_fit <- max(summary_stats_top_neighborhoods$avg_square_feet, na.rm = TRUE)
+highest_avg_square_ft <- max(summary_stats_top_neighborhoods$avg_square_feet, na.rm = TRUE)
 
 second_avg_price <- sort(summary_stats_top_neighborhoods$avg_price, decreasing = TRUE)[2]
 
