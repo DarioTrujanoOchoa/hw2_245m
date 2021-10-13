@@ -18,3 +18,5 @@ colnames(airbnb)
 airbnb <-airbnb %>% 
   rename(neighborhood=neighbourhood)
 
+# Part 2 ----
+neighborhoods <- airbnb %>% count(neighborhood)
