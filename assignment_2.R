@@ -48,6 +48,5 @@ highest_avg_square_ft <- summary_stats_top_neighborhoods[1,"avg_square_feet"] %>
   pull()
 
 ## f 
-second_avg_price <- summary_stats_top_neighborhoods[2,"avg_square_feet"] %>% 
-  pull()
+second_avg_price <- sort(summary_stats_top_neighborhoods$avg_price,decreasing = T)[2]
 
