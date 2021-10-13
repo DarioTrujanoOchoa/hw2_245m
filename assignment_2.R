@@ -43,3 +43,11 @@ airbnb_top_neighborhoods %>%
             min_price = min(price)) %>% 
   arrange(-avg_square_feet)
 
+## e
+highest_avg_square_ft <- summary_stats_top_neighborhoods[1,"avg_square_feet"] %>% 
+  pull()
+
+## f 
+second_avg_price <- summary_stats_top_neighborhoods[2,"avg_square_feet"] %>% 
+  pull()
+
